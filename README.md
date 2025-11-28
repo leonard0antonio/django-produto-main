@@ -16,7 +16,16 @@ Pode servir como estudo, base para extensões futuras ou protótipo rápido para
 - Python 3.x  
 - Django (versão usada no projeto)  
 - Bibliotecas definidas em `requirements.txt`  
-- React no frontend — confira a pasta `frontend`  
+- React no frontend — confira a pasta `frontend`
+
+-----
+
+## 📷 Demonstração
+
+
+![Demo da aplicação](demo01.gif)
+
+-----
 
 ## 🚀 Como usar / rodar localmente  
 
