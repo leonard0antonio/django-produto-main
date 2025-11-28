@@ -77,7 +77,7 @@ requirements.txt – dependências do projeto
 -----
 ### 🔁 **DataFlow — Fluxo de Dados
 
-![DataFlow](./Dataflow.png)
+![DataFlow](./dataFlow.png)
 
 -----
 
