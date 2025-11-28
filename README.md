@@ -1,4 +1,4 @@
-# django-produto-main  
+# django-produto
 
 > Um sistema simples com Django para gerenciar produtos — cadastro, listagem, (evolutivamente) CRUD completo.  
 
@@ -77,7 +77,7 @@ requirements.txt – dependências do projeto
 -----
 ### 🔁 **DataFlow — Fluxo de Dados
 
-![DataFlow](./DataFlow.png)
+![DataFlow](./Dataflow.png)
 
 -----
 
