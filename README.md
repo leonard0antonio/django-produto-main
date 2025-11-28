@@ -25,7 +25,7 @@ Pode servir como estudo, base para extensões futuras ou protótipo rápido para
 
 ![Demo da aplicação](demo01.gif)
 
------
+
 
 ## 🚀 Como usar / rodar localmente  
 
@@ -69,7 +69,17 @@ manage.py      – script de gerenciamento do Django
 requirements.txt – dependências do projeto  
 ```
 
+## 🔄 Fluxos do Sistema
 
+
+![UserFlow](./UserFlow.png)
+
+-----
+### 🔁 **DataFlow — Fluxo de Dados
+
+![DataFlow](./DataFlow.png)
+
+-----
 
 ## 🤝 Como contribuir
 
