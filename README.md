@@ -1,80 +1,80 @@
-# Projeto Store
+# django-produto-main  
 
-### Configuração do ambiente de desenvolvimento
+> Um sistema simples com Django para gerenciar produtos — cadastro, listagem, (evolutivamente) CRUD completo.  
 
-- Para a criação do ambiente virtual e ativação do mesmo
+## 🧾 Visão geral  
+Este projeto é uma base de exemplo (ou ponto de partida) de um sistema backend — com frontend minimalista — para cadastro e listagem de produtos, usando o framework Django.  
+Pode servir como estudo, base para extensões futuras ou protótipo rápido para aplicações de estoque/loja.  
 
-```bash
-python -m venv .venv
-```
+## ✅ Funcionalidades  
+- Listar produtos cadastrados.  
+- Criar novos produtos.  
+- Estrutura básica de backend + frontend integrada.  
+- Configuração via virtual environment + requirements.txt.  
 
-- Ativição do ambiente virtual no Windows
-```bash
-.venv\Scripts\activate # Windows users
-```
+## 📚 Tecnologias & Dependências  
+- Python 3.x  
+- Django (versão usada no projeto)  
+- Bibliotecas definidas em `requirements.txt`  
+- React no frontend — confira a pasta `frontend`  
 
-- Ativição do ambiente virtual no Linux
-```bash
-.venv/bin/activate # Unix users
-```
-
-Agora vamos instalar a biblioteca do Django em nosso ambiente virtual
-
-```bash
-pip install django
-```
-
-- Criar o arquivo requirements.txt com as bibliotecas necessárias para o funcionamento do projeto
-```bash
-pip freeze > requirements.txt
-```
-
-- Criar um projeto no Django `o ponto no final` esta atrelado a criar a pasta no mesmo nível
-```bash
-django-admin startproject config .
-```
-
-- Criar a aplicação gerenciada pelo Django
-```bash
-python manage.py startapp produtos
-```
-
-- Configure em `settings.py` a aplicação criada anteriormente.
-```bash
-INSTALLED_APPS = [
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
-    'produtos', # Adicione aqui o nome da sua aplicação
-]
-```
-
-Após criar seu modelo da aplicação na pasta `models.py` execute o comando abaixo
+## 🚀 Como usar / rodar localmente  
 
 ```bash
-python manage.py makemigrations
+# Clone este repositório  
+git clone https://github.com/leonard0antonio/django-produto-main.git  
+
+# Acesse a pasta do projeto  
+cd django-produto-main  
+
+# Crie e ative um ambiente virtual  
+python -m venv .venv  
+# no Windows:
+.venv\Scripts\activate  
+# no Linux / macOS:
+source .venv/bin/activate  
+
+# Instale as dependências  
+pip install -r requirements.txt  
+
+# Aplique as migrações  
+python manage.py migrate  
+
+# (Opcional) Crie um superusuário para acessar o admin  
+python manage.py createsuperuser  
+
+# Execute o servidor de desenvolvimento  
+python manage.py runserver  
+
+# Acesse via browser:
+http://127.0.0.1:8000/  
+````
+
+## 🎯 Estrutura de pastas principais
+
 ```
-- em seguida iniciamos o comando 
-```bash
-python manage.py migrate
+/config         – configuração do projeto Django  
+/frontend       – código frontend (se houver)  
+/produtos       – app Django que contém o model Produto, views, templates, etc.  
+manage.py      – script de gerenciamento do Django  
+requirements.txt – dependências do projeto  
 ```
 
-- Registraremos agora no arquivo `admin.py` o
 
-```python
-from django.contrib import admin
 
-from .models import Produto
+## 🤝 Como contribuir
 
-admin.site.register(Produto)
+Contribuições são bem-vindas! Se quiser sugerir melhorias ou novas funcionalidades:
+
+1. Fork o repositório.
+2. Crie uma branch para sua feature (`git checkout -b feature/nome-da-feature`).
+3. Faça commits das suas alterações (`git commit -m 'Adiciona ...'`).
+4. Envie um pull request.
+
+## 📞 Contato
+
+Se quiser entrar em contato comigo: leonard0antonio (você pode colocar seu e-mail ou perfil GitHub).
+
 ```
+-
 
-- Agora criaremos o super usuário para acessar o ambiente admin.
-```bash
-python manage.py createsuperuser
-```
-
-Agora iniciamos o nosso servidor `python manage.py runserver` e acessamos 127.0.0.1:8000/admin o acesso se dará por parte com o nome de usuário e senha que você definiu anteiormente.

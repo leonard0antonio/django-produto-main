@@ -1,4 +1,3 @@
-// App.tsx
 import React, { useEffect, useState } from "react";
 import type { FormEvent } from "react";
 import styled, { css, keyframes } from "styled-components";
@@ -240,8 +239,6 @@ function App(): JSX.Element {
   });
 
   // modal state
-  const [saveLoading, setSaveLoading] = useState(false);
-  const [confirmSaveOpen, setConfirmSaveOpen] = useState(false);
 
   const [confirmOpen, setConfirmOpen] = useState(false);
   const [toDeleteId, setToDeleteId] = useState<number | null>(null);
@@ -285,7 +282,6 @@ function App(): JSX.Element {
 
   async function handleSubmit(e: FormEvent) {
     e.preventDefault();
-    setConfirmSaveOpen(true);
 
     const url = produtoEditando
       ? `http://127.0.0.1:8000/api/produtos/${produtoEditando.id}/`
